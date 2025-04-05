@@ -1,0 +1,562 @@
+/* ========= Reset & Global Styles ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ========= Background Images for Each Page ========= */
+/* ========= Background Images for Each Page ========= */
+.home-page {
+  background: url('image.jpg.crdownload') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh; /* Ensure the page fills the viewport */
+}
+
+.menu-page {
+  background: url('pic.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+/* ========= Order Container with Semi-Transparent Background ========= */
+.order-container {
+  background: rgba(255, 255, 255, 0.5); /* white with 80% opacity */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.about-page {
+  background: url('nick-karvounis-Ciqxn7FE4vE-unsplash.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.feedback-page {
+  background: url('pic4.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+.order-page {
+  background: url('pic2.jpg') no-repeat center center;
+  background-size:cover;
+  min-height: 100vh;
+}
+
+
+/* ========= Layout ========= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 1rem;
+}
+.sidebar .logo {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.nav-links {
+  list-style: none;
+}
+.nav-links li {
+  margin: 1rem 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem;
+  transition: background 0.3s ease;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.content {
+  margin-left: 240px; /* space for sidebar */
+  padding: 2rem;
+}
+
+/* ========= Hero Section ========= */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero-content h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* ========= Highlights Section ========= */
+/* Existing styling for .highlights can be replaced/augmented with the following: */
+
+.highlights {
+  overflow: hidden; /* Clear floats */
+  padding: 1rem 0;
+  background: #ffffff9a; /* Optional background */
+}
+
+.highlight {
+  float: left;              /* Float boxes side by side */
+  width: 33.33%;            /* Each takes up one third of the container */
+  box-sizing: border-box;   /* Ensure padding does not affect width */
+  padding: 1rem;
+  text-align: center;       /* Center align text */
+}
+
+/* Responsive Adjustment: For smaller screens, stack the highlights */
+@media (max-width: 768px) {
+  .highlight {
+    width: 100%;            /* Full width on small devices */
+    float: none;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* ========= Menu Section ========= */
+
+/* ========= Order Container with Semi-Transparent Background ========= */
+.menu-section {
+  background: rgba(255, 255, 255, 0.5); /* white with 80% opacity */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-filter {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.filter-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #555;
+}
+/* Fixed box width so they remain the same size even when filtered */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  gap: 1.5rem;
+}
+.menu-item {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.menu-item h3 {
+  margin-bottom: 0.5rem;
+}
+.menu-item span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* If you have images in menu items */
+.menu-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.menu-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ========= Form Styles ========= */
+.form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+.form label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.btn:hover {
+  background-color: #555;
+}
+.message {
+  text-align: center;
+  margin-top: 1rem;
+  color: green;
+}
+
+/* ========= Responsive Adjustments ========= */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+  .content {
+    margin-left: 200px;
+    padding: 1rem;
+  }
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+  }
+  .content {
+    margin: 0;
+    padding: 1rem;
+  }
+  .hero {
+    padding: 80px 20px;
+  }
+}
+
+/* ========= Order Page: Food Grid & Cards ========= */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.food-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.food-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.food-card:hover img {
+  transform: scale(1.05);
+}
+.food-info {
+  padding: 1rem;
+}
+.food-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.food-info p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+.food-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+/* ========= Feedback Container and Overlay Styles ========= */
+/************************************
+  FEEDBACK SECTION
+************************************/
+
+
+/* Main container that holds the image and form side by side */
+.feedback-container {
+  display: flex;
+  max-width: 1400px;                /* Wider container */
+  min-height: 900px;                /* Taller container */
+  margin: 0 auto;                   /* Center the container */
+  background: rgba(255,255,255,0.5);/* White background with 70% opacity */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Left side: The horizontally oriented image */
+.feedback-image {
+  flex: 1;
+  background: url('feed.jpg') no-repeat center center / cover;
+  /* Replace '../images/feedback-horizontal.jpg' with your actual image path */
+}
+
+/* Right side: The feedback form */
+.feedback-box {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the form */
+}
+
+/* Headings inside the box */
+.feedback-box h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Basic form styling (adjust as needed) */
+.form label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.btn:hover {
+  background-color: #555;
+}
+.message {
+  margin-top: 1rem;
+  color: green;
+  text-align: center;
+}
+
+/************************************
+  RESPONSIVE ADJUSTMENTS
+************************************/
+@media (max-width: 768px) {
+  .feedback-container {
+    flex-direction: column; /* Stack image and form vertically on smaller screens */
+    min-height: auto;       /* Let content define height on small devices */
+  }
+  .feedback-image {
+    height: 250px;          /* Provide a fixed height if needed for the image area */
+  }
+  .feedback-box {
+    padding: 1rem;
+  }
+}
+/* ========= About Section ========= */
+/* ========= General Reset & Global Styles ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f0f0f0;
+}
+
+/* ========= Sidebar & Content (existing styles) ========= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 1rem;
+}
+.sidebar .logo {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.nav-links {
+  list-style: none;
+}
+.nav-links li {
+  margin: 1rem 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem;
+  transition: background 0.3s ease;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #555;
+  border-radius: 4px;
+}
+.content {
+  margin-left: 240px;
+  padding: 2rem;
+}
+
+/* ========= About Section ========= */
+
+
+/* Main container with two columns */
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Left Column: Horizontal Image */
+.about-image {
+  flex: 1;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: center;
+}
+
+/* Right Column: Text Container */
+.about-text-container {
+  flex: 1;
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent background */
+  transition: background 0.3s ease;
+}
+
+/* Both text blocks inside should transition opacity */
+.about-text-container > div {
+  transition: opacity 0.3s ease;
+}
+
+/* About Info is visible by default */
+.about-info {
+  opacity: 1;
+}
+
+/* Contact Details are hidden by default */
+.contact-details {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* On hover, hide About Info and show Contact Details */
+.about-text-container:hover .about-info {
+  opacity: 0;
+}
+.about-text-container:hover .contact-details {
+  opacity: 1;
+}
+
+/* Heading and paragraph styling */
+.about-text-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.about-text-container p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ========= Responsive Adjustments ========= */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .contact-details {
+    position: relative;
+  }
+}
+/* ========= Footer Styling ========= */
+footer {
+  background-color: #33333300;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Credits styling */
+footer .credits {
+  font-size: 0.9rem;
+  color: #ccc;
+}

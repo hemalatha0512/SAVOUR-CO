@@ -1,0 +1,77 @@
+<!-- Order Food Page (order.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food - Hotel Paradise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #444;
+            color: white;
+            padding: 15px;
+        }
+        form {
+            margin: 20px auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #cc5500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Order Your Favorite Food</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="order.html">Order Food</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <select id="foodItem" required>
+                <option value="">Select a Dish</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Sushi">Sushi</option>
+            </select>
+            <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+            <button type="submit">Order Now</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for your order! Your food is being prepared.");
+        });
+    </script>
+</body>
+</html>

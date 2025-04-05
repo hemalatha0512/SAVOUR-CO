@@ -1,0 +1,58 @@
+<!-- Menu Page (menu.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Hotel Paradise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #444;
+            color: white;
+            padding: 15px;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            display: inline-block;
+            width: 200px;
+        }
+        .menu-item:hover {
+            background-color: #f8f8f8;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="order.html">Order Food</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="menu-item">Pasta - $12</div>
+        <div class="menu-item">Pizza - $15</div>
+        <div class="menu-item">Sushi - $18</div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Menu page loaded successfully.");
+        });
+    </script>
+</body>
+</html>
